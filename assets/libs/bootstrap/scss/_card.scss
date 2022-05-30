@@ -57,6 +57,9 @@
 
 .card-title {
   margin-bottom: $card-title-spacer-y;
+// Cambia color letra en title  
+  @extend .text-primary;
+//FIN
 }
 
 .card-subtitle {
