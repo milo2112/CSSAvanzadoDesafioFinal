@@ -17,7 +17,10 @@ Here are the variables we include (note that the `:root` is required) that can b
 ```css
 {{< root.inline >}}
 {{- $css := readFile "dist/css/bootstrap.css" -}}
+
+{% raw %}
 {{- $match := findRE ":root {([^}]*)}" $css 1 -}}
+{% endraw %}
 
 {{- if (eq (len $match) 0) -}}
 {{- errorf "Got no matches for :root in %q!" $.Page.Path -}}
