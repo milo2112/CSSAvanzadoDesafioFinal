@@ -18,6 +18,9 @@
   border: $btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
   @include transition($btn-transition);
+// Extendemos propiedad de color de letra para ser cambiado en el boton de la card
+  @extend .text-light;
+//FIN
 
   &:hover {
     color: $body-color;
